@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun abrirVentana2() {
         var miIntnet:Intent= Intent(this,Ventana22::class.java)
+        miIntnet.putExtra("nombre",binding.cajaNombre.text.toString())
+        miIntnet.putExtra("edad",binding.cajaEdad.text.toString())
         startActivity(miIntnet)
     }
 }
